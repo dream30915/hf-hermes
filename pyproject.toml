@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hf-hermes"
+version = "0.1.0"
+description = "Launch Hermes Agent with Hugging Face Inference Providers"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "dream30915" }]
+classifiers = [
+  "Environment :: Console",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.urls]
+Source = "https://github.com/dream30915/hf-hermes"
+Issues = "https://github.com/dream30915/hf-hermes/issues"
+
+[project.scripts]
+hf-hermes = "hf_hermes.cli:entrypoint"
+
+[tool.setuptools.packages.find]
+where = ["src"]
