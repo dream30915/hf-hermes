@@ -29,3 +29,5 @@ jobs:
         run: python -m compileall -q src tests
       - name: Smoke test extension entry point
         run: hf-hermes --model Qwen/Qwen3.5-397B-A17B --dry-run -- --quiet
+        env:
+          HF_TOKEN: test-token
